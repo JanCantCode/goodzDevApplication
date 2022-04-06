@@ -26,7 +26,7 @@ bot.on("messageCreate", (message) => {
         }
     }
     if (message.mentions.users.first() == undefined) {
-        message.channel.send("Du solltest schon eine existente Person als freund hinzufügen i guess, ```" + args[1] + "``` ist entweder nicht auf dem Server, oder kein realer Nutzer.")
+        message.channel.send("Du solltest schon eine existente Person als freund hinzufügen i guess, ```" + args[1].substring(0, 1000) + "``` ist entweder nicht auf dem Server, oder kein realer Nutzer.")
         return
     }
     if (!userDataBase[message.mentions.users.first().id]) {
